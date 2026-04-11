@@ -1,0 +1,8 @@
+a.out 
+a.exe
+*
+.vscode/
+
+!*cpp
+!.gitignore
+
