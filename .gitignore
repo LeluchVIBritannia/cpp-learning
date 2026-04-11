@@ -1,8 +1,10 @@
 a.out 
 a.exe
-
+*.out
+*.o
+*
 .vscode/
 
 !*cpp
 !.gitignore
-
+!*/
