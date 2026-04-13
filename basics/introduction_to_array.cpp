@@ -22,7 +22,7 @@ void stringArray(std::string array[] , int size)
    
     cout << array[2] << '\n';   
     cout << array[0] << '\n';  
-      
+
 }
 
 void intArray() 
