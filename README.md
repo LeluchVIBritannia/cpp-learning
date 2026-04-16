@@ -9,5 +9,5 @@ Progress:
 [x] Conditionals.
 [x] Loops
 [x] Functions
-[ ] Array
+[X] Array
 [ ] OOP
