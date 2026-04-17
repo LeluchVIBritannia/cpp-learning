@@ -2,47 +2,58 @@
 
 using std::cout;
 using std::cin;
+using std::string;
 
-void swap(std::string &s1 , std::string &s2);
+void swap(string &s1, string &s2);
 
 int main()
 {
-    //Memory
-    std::string name = "alvin";
+    // Memory: addresses
+    string name = "Zero";
     int age = 18;
     bool student = true;
 
     cout << "The address of name is " << &name << '\n';
-    cout << "The address of age is " << &age << '\n';
+    cout << "The address of age is "  << &age  << '\n';
     cout << "The address of student is " << &student << '\n';
 
-    //pass my value and pass by reference 
-    //pass by value = copy pass by reference = orignal 
-    std::string x = "AlnS";
-    std::string y = "YanzT";
+    // Pass by reference (swap originals)
+    string x = "AlnS";
+    string y = "YanzT";
 
-    swap(x , y);
+    swap(x, y);
 
     cout << "X: " << x << '\n';
     cout << "Y: " << y << '\n';
 
-    //Pointers a variables that stores memory of another variable
-    std::string Name = "yant";
-    std::string *pName = &name;
+    // Pointer: a variable that stores the address of another variable
+    string Name = "yant";        // separate variable
+    string *pName = &Name;       // pName points to Name
 
-    cout << pName;
-    cout << '\n' << *pName << '\n';
+    cout << "Address stored in pName: " << pName << '\n';
+    cout << "Value pointed to by pName: " << *pName << '\n';
 
-    //Null pointer It has not value so it points to noting
-    
+    // Null pointer example
+    int *pointer = nullptr;      // pointer starts as null
+    int num = 123;
+
+    pointer = &num;              // now it points to num
+
+    if (pointer == nullptr)
+    {
+        cout << "Address was not assigned\n";
+    }
+    else
+    {
+        cout << "Address was assigned: " << pointer << '\n';
+    }
+
     return 0;
 }
 
-void swap(std::string &s1 , std::string &s2)
+void swap(string &s1, string &s2)
 {
-    std::string temp;
-
-    temp = s1;
+    string temp = s1;
     s1 = s2;
     s2 = temp;
 }
