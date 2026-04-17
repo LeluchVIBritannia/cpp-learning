@@ -25,8 +25,16 @@ int main()
 
     cout << "X: " << x << '\n';
     cout << "Y: " << y << '\n';
-    
 
+    //Pointers a variables that stores memory of another variable
+    std::string Name = "yant";
+    std::string *pName = &name;
+
+    cout << pName;
+    cout << '\n' << *pName << '\n';
+
+    //Null pointer It has not value so it points to noting
+    
     return 0;
 }
 
