@@ -13,7 +13,7 @@ bool checkTie(char *spaces);
 int main()
 {
     char spaces[9] = {' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' '};
-    char player = 'X';
+    char player = 'x';
     char computer = 'o';
     bool running = true;
     int  choise;
@@ -53,6 +53,14 @@ int main()
 
         cout << "\npress 1 to play again ";
         cin  >> choise;
+        if(choise == 1)
+        {
+            for(int j = 0 ; j < 9 ; j++)
+            {
+                spaces[j] = ' ';
+                running = true;
+            }
+        }
 
     }while(choise == 1);
 
@@ -156,7 +164,7 @@ bool checkTie(char *spaces)
     {
         if(spaces[i] != ' ')
         {
-            notEmpty +-1;
+            notEmpty +=1;
         }
     }
     if(notEmpty == 9)
