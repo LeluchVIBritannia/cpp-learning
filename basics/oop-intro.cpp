@@ -12,7 +12,7 @@ class car
         int hp;
         int topspeed;
 
-        void setColour(std::string &col)
+        void setColour(const std::string &col)
         {
             colour = col;
         }
@@ -24,9 +24,11 @@ int main()
     car carA;
     carA.Name     = "F-40";
     carA.Brand    = "Ferrari";
-    carA.setColour("red");
     carA.hp       = 1000;
     carA.topspeed = 300; 
+    carA.setColour("red");
+
+    cout << "\nThe car is a " << carA.Brand << " " << carA.Name << " with " << carA.hp << ".\n";
 
     return 0;
 }
